@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SpawnerTag.iml" filepath="$PROJECT_DIR$/.idea/SpawnerTag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpawnerTa.iml" filepath="$PROJECT_DIR$/SpawnerTa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpawnerTag.iml" filepath="$PROJECT_DIR$/SpawnerTag.iml" />
     </modules>
   </component>
 </project>

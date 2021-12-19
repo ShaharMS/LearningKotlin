@@ -1,0 +1,4 @@
+name: SpawnerTag
+version: '${project.version}'
+main: com.shaharms.plugins.spawnertag.SpawnerTag
+api-version: 1.18

@@ -1,8 +1,0 @@
-name: SpawnerTag
-version: @version@
-main: com.citymonke.shaharms.spawnertag.spawnertag.SpawnerTag
-api-version: 1.18
-prefix: SpawnerTag
-load: STARTUP
-authors: [ ShaharMS ]
-description: generates a spawner at a random location. when a spawner is cought, generates a new one!
