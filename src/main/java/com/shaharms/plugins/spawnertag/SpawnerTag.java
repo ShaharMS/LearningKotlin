@@ -4,6 +4,7 @@ import org.bukkit.*;
 import org.bukkit.block.BlockState;
 import org.bukkit.block.Chest;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
@@ -11,16 +12,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Random;
 
-public final class SpawnerTag extends JavaPlugin {
+public final class SpawnerTag extends JavaPlugin implements Listener {
 
     @EventHandler
     public void Break(BlockBreakEvent onBlockBreak){
-        if (onBlockBreak.getBlock().getX() == -627 && onBlockBreak.getBlock().getY() == 93 && onBlockBreak.getBlock().getZ() == -1430) getServer().getWorld("world").getBlockAt(-625, 94, -1430).setType(getTypeByChance());
+        if (onBlockBreak.getBlock().getX() == -627 && onBlockBreak.getBlock().getY() == 93 && onBlockBreak.getBlock().getZ() == -1431) getServer().getWorld("world").getBlockAt(-627, 93, -1431).setType(getTypeByChance());
     }
 
     @EventHandler
-    public void onBlockPlace(BlockPlaceEvent onBlockPlace) {
-        if (onBlockPlace.getBlock().getX() == -627 && onBlockPlace.getBlock().getY() == 93 && onBlockPlace.getBlock().getZ() == -1430) {
+    public void Place(BlockPlaceEvent onBlockPlace) {
+        if (onBlockPlace.getBlock().getX() == -627 && onBlockPlace.getBlock().getY() == 93 && onBlockPlace.getBlock().getZ() == -1431) {
             if (onBlockPlace.getBlock().getType() == Material.CHEST) {
                 BlockState state = onBlockPlace.getBlock().getState();
                 Chest chest = (Chest) state;
@@ -58,7 +59,8 @@ public final class SpawnerTag extends JavaPlugin {
     }
     @Override
     public void onEnable() {
-        getServer().getWorld("world").getBlockAt(-627, 93, -1430).setType(getTypeByChance());
+        getServer().getWorld("world").getBlockAt(-627, 93, -1431).setType(getTypeByChance());
+        Bukkit.getPluginManager().registerEvents(this, this);
     }
 
     @Override
